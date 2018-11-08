@@ -1,0 +1,20 @@
+// Color variables
+$nav_main: #1f2229;
+$nav_active: #2a2d37;
+$nav_accent: #191c24;
+$main_heading-wrapper: #00aeef;
+$main_button: #9cc300;
+$footer: #373c43;
+
+// Fonts
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url('/fonts/OpenSans-Bold.ttf');
+}
+
+body {
+    font-family: OpenSansBold;
+    font-size: 16px;
+    line-height: 1.4;
+}

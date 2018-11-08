@@ -1,0 +1,35 @@
+.header {
+    width: 320px;
+    background-color: $nav_main;
+}
+
+.header__logo {
+    padding: 65px 100px 65px 30px;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.nav__item {
+    padding: 30px;
+    border-top: 1px solid #22252d;
+}
+
+.nav__link {
+    display: inline-block;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav__item_active {
+    background-color: $nav_active;
+}
+
+.nav__item_profile {
+    background-color: $nav_accent;
+}
