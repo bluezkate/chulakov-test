@@ -8,89 +8,135 @@
     <title>Chulakov Studio Тестовое задание</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <a href="index.html"><img class="header__logo-img" src="/img/logo.png" alt="Логотип сайта"></a>
-        </div>
-        <nav class="header__nav nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Первая ссылка</a></li>
-                <li class="nav__item nav__item_active"><a href="#" class="nav__link">Вторая ссылка (активная)</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Третья ссылка</a></li>
-                <li class="nav__item nav__item_profile"><a href="#" class="nav__link">Личный кабинет</a></li>
-                <li class="nav__item nav__item_profile"><a href="#" class="nav__link">Выйти</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="payment-info">
-            <div class="payment-info__heading heading">
-            <h1 class="heading__title">Заголовок страницы</h1>
-            <p class="heading__text">В отличие от пылевого и ионного хвостов, направление поступает
-                    в лимногляциальный часовой угол</p>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <a href="index.html"><img class="header__logo-img" src="/img/logo.png" alt="Логотип сайта"></a>
             </div>
-            <div class="payment-info__bill bill">
-                <p class="bill__heading">Информация по оплате</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th class="bill__title">Номер счета:</th>
-                            <td class="bill__text">87123658716587</td>
-                        </tr>
-                        <tr>
-                            <th class="bill__title">Сумма платежа</th>
-                            <td class="bill__text">100 руб.</td>
-                        </tr>
-                    </tbody>
-                </table>  
-            </div>
-            <form class="payment-info__form form">
-                <h2 class="form__heading">Данные банковской карты</h2>
-                <div class="form__card-wrapper card-wrapper">
-                    <p class="card-wrapper__title">Номер карты</p>
-                    <input type="number" name="" id="">
-                    <input type="number" name="" id="">
-                    <input type="number" name="" id="">
-                    <input type="number" name="" id="">
-                    <p class="card-wrapper__title">Срок действия</p>
-                    <select name="cardMonth" id="cardMonth">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4" selected>4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                    <select name="cardYear" id="cardYear">
-                        <option value="2018" selected>2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                    </select>
-                    <input type="text" name="" id="" placeholder="Держатель карты">
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Первая ссылка</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link_active">Вторая ссылка (активная)</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Третья ссылка</a></li>
+                    <li class="nav__item nav__item_profile"><a href="#" class="nav__link">Личный кабинет</a></li>
+                    <li class="nav__item nav__item_profile"><a href="#" class="nav__link">Выйти</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="payment-info">
+                <header class="payment-info__heading heading">
+                    <h1 class="heading__title">Заголовок страницы</h1>
+                    <p class="heading__text">В отличие от пылевого и ионного хвостов, направление поступает
+                            в лимногляциальный часовой угол</p>
+                    </header>
+                <div class="payment-info__wrapper">
+                    <div class="payment-info__bill bill">
+                    <p class="bill__heading">Информация по оплате</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="bill__title">Номер счета:</th>
+                                <td class="bill__text">87123658716587</td>
+                            </tr>
+                            <tr>
+                                <th class="bill__title">Сумма платежа:</th>
+                                <td class="bill__text">100 руб.</td>
+                            </tr>
+                        </tbody>
+                    </table>  
                 </div>
-                <div class="form__card-wrapper form__card-wrapper_back">
-                    <p class="card-wrapper__title">Код CVV2 / CVC2</p>
-                    <input type="number" name="" id="">
+                <form class="payment-info__form form" method="POST" enctype="multipart/form-data" action="" autocomplete="off">  
+                    <h2 class="form__heading">Данные банковской карты</h2>
+                    <div class="form__card-wrapper card-wrapper">
+                        <p class="card-wrapper__title">Номер карты</p>
+                        <div class="card-wrapper__input">
+                            <input type="text" id="cardNumber1" class="card-wrapper__card-number" value="" maxlength="4" placeholder="xxxx" required>
+                            <input type="text" id="cardNumber2" class="card-wrapper__card-number" value="" maxlength="4" placeholder="xxxx" required>
+                            <input type="text" id="cardNumber3" class="card-wrapper__card-number" value="" maxlength="4" placeholder="xxxx" required>
+                            <input type="text" id="cardNumber4" class="card-wrapper__card-number" value="" maxlength="4" placeholder="xxxx" required>
+                        </div>
+                        <input name="cardNumber" id="cardNumber" class="visually-hidden" readonly>
+                        <p class="card-wrapper__title">Срок действия</p>
+                            <div class="card-wrapper__select">
+                                <select name="cardMonth" id="cardMonth" class="card-wrapper__card-month visually-hidden">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4" selected>4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <div id="cardMonthDivWrapper" class="card-wrapper__card-month_div-wrapper">
+                                    <span class="card-month_div-wrapper__value">4</span>
+                                    <div id="cardMonthDivOptions" class="card-wrapper__card-month_div-options div-options visually-hidden">
+                                        <div class="div-options__item">1</div>
+                                        <div class="div-options__item">2</div>
+                                        <div class="div-options__item">3</div>
+                                        <div class="div-options__item">4</div>
+                                        <div class="div-options__item">5</div>
+                                        <div class="div-options__item">6</div>
+                                        <div class="div-options__item">7</div>
+                                        <div class="div-options__item">8</div>
+                                        <div class="div-options__item">9</div>
+                                        <div class="div-options__item">10</div>
+                                        <div class="div-options__item">11</div>
+                                        <div class="div-options__item">12</div>
+                                    </div>
+                                </div>
+                                <select name="cardYear" id="cardYear" class="card-wrapper__card-year visually-hidden">
+                                    <option value="2018" selected>2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                </select>
+                                <div id="cardYearDivWrapper" class="card-wrapper__card-year_div-wrapper">
+                                    <span class="card-year_div-wrapper__value">2018</span>
+                                    <div id="cardYearDivOptions" class="card-wrapper__card-year_div-options div-options visually-hidden">
+                                        <div class="div-options__item">2018</div>
+                                        <div class="div-options__item">2019</div>
+                                        <div class="div-options__item">2020</div>
+                                        <div class="div-options__item">2021</div>
+                                        <div class="div-options__item">2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <input type="text" name="cardHolder" id="cardHolder" class="card-wrapper__card-holder" placeholder="Держатель карты" required pattern="^[A-Z]{4,}$">
+                    </div>
+                    <div class="form__card-wrapper card-wrapper card-wrapper_back">
+                        <p class="card-wrapper__title">Код CVV2 / CVC2</p>
+                        <input type="text" maxlength="3" name="cardCVC" id="cardCVC" class="card-wrapper__cardCVC" required pattern="^([0-9]{3})$"/>
+                        <span class="card-wrapper__hint" tooltip="Код CVV2 / CVC2 – трехзначный код для проверки подлинности карты, располагается на её обратной стороне."></span>
+                    </div>
+                    <button id="formSubmit" class="form__send-button">Оплатить</button>
+                </form>
                 </div>
-                <button class="form__send-button">Оплатить</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p class="footer__text">
-            Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-            Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-            Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-            Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
-        </p>
-    </footer>
+                <footer class="payment-info__text">
+                    <p>
+                        Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.  
+                    </p>
+                    <p>
+                        Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.  
+                    </p>
+                    <p>
+                        Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.  
+                    </p>
+                    <p>
+                        Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.  
+                    </p>
+                </footer>
+            </section>
+        </main>  
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
